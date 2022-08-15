@@ -5,6 +5,10 @@
     "description": "IPA validator",
     "repository": "theresnotime/ipa-validator",
     "main": "index.js",
+    "keywords": [
+        "IPA",
+        "validator"
+    ],
     "jshintConfig": {
         "esversion": 8
     },
