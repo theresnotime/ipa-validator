@@ -1,0 +1,19 @@
+{
+    "name": "@theresnotime/ipa-validator",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "IPA validator",
+    "main": "index.js",
+    "jshintConfig": {
+        "esversion": 8
+    },
+    "devDependencies": {
+        "jest": "^28.1.1",
+        "jshint": "^2.13.4"
+    },
+    "scripts": {
+        "test": "npm run lint && jest",
+        "jest": "jest --verbose",
+        "lint": "jshint dist/index.js --verbose --show-non-errors"
+    }
+}
