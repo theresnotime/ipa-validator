@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "license": "MIT",
     "description": "IPA validator",
+    "repository": "theresnotime/ipa-validator",
     "main": "index.js",
     "jshintConfig": {
         "esversion": 8
