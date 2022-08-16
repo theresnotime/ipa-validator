@@ -26,6 +26,43 @@ Unsurprisingly, `true` for valid IPA, `false` for invalid IPA..
 ### A note on "valid"
 As the tests show, you need to use the correct unicode — for example, `həˈləʊ` is valid but `hə'ləʊ` is not.
 
+## Functions
+### validate
+By default, the `validate` function strips delimiters (`/.../`, `[...]`) and checks that the string contains only valid IPA characters.
+```js
+/**
+ * Validate delimiter-stripped IPA, optionally normalising it first.
+ * @param {string} ipa - IPA to validate.
+ * @param {boolean} strip - Strip delimiters (default: true)
+ * @param {boolean} normalizeIPA - Normalize IPA (default: false)
+ * @returns {boolean} - Whether the IPA is valid.
+ */
+function validate(ipa, strip = true, normalizeIPA = false)
+```
+### normalize
+The `normalize` function ensures that the IPA is using the correct unicode for similar looking characters (e.g. that you're using`ˈ` instead of `'`).
+By default, it does *not* strip delimiters.
+```js
+/**
+ * Normalize IPA
+ * @param {string} ipa - IPA to normalize.
+ * @param {boolean} strip - Strip delimiters (default: false)
+ * @returns {string} - normalized IPA
+ */
+function normalize(ipa, strip = false)
+```
+
+### stripIPA
+The `stripIPA` function strips delimiters (`/.../`, `[...]`) from the IPA.
+```js
+/**
+ * Strip IPA delimiters (currently /.../ and [...])
+ * @param {string} ipa - IPA to strip.
+ * @returns {string} - Stripped IPA
+ */
+function stripIPA(ipa)
+```
+
 ## Developing
  1. [Fork n' clone](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) this repo
  2. Do a `npm install`
