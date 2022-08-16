@@ -31,3 +31,10 @@ As the tests show, you need to use the correct unicode — for example, `həˈl�
  2. Do a `npm install`
  3. Run `npm test` because who knows, maybe its already broken
  4. Hack!
+
+## The Regex
+```
+^[pbtdʈɖcɟkɡqɢʔmɱnɳɲŋɴʙrʀⱱɾɽɸβfvθðszʃʒʂʐçʝxɣχʁħʕhɦɬɮʋɹɻjɰlɭʎʟʘǀǃǂǁɓɗʄɠʛʼiyɨʉɯuɪʏʊeøɘj̊uɵɤoəɛœɜɞʌɔæɐaɶɑɒʍwɥʜʢʡɕʑɺɧ͜͡ˈˌːˑ̆|‖.‿̥̬ʰ̹̜̟̠̩̯̈̽˞̤̰̼ʷʲˠˤ̴̝̞̘̙̪̺̻̃ⁿˡ̋̚˥̌˩́˦̂̄˧᷄̀˨᷅̏᷈ɚ()ˀɝɫ̩]+$
+```
+
+I've also placed it at https://regex101.com/r/JzUFdH if you think you can improve it... (**please do**!)
