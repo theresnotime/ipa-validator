@@ -1,10 +1,10 @@
 {
     "name": "@theresnotime/ipa-validator",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "license": "MIT",
     "description": "IPA validator",
     "repository": "theresnotime/ipa-validator",
-    "main": "index.js",
+    "main": "dist/index.js",
     "keywords": [
         "IPA",
         "validator"
