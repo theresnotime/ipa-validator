@@ -1,1 +1,1 @@
-export function validate(ipa: string): boolean;
+export function validate(ipa: string, strip: boolean): boolean;
