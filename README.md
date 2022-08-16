@@ -23,6 +23,9 @@ let validatorResult = await ipaValidator.validate('həˈləʊ');
 ## ..and a bool comes out!
 Unsurprisingly, `true` for valid IPA, `false` for invalid IPA..
 
+### A note on "valid"
+As the tests show, you need to use the correct unicode — for example, `həˈləʊ` is valid but `hə'ləʊ` is not.
+
 ## Developing
  1. [Fork n' clone](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) this repo
  2. Do a `npm install`
