@@ -13,6 +13,7 @@
         "esversion": 8
     },
     "devDependencies": {
+        "@types/jest": "^28.1.7",
         "jest": "^28.1.1",
         "jshint": "^2.13.4"
     },

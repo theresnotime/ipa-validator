@@ -4,12 +4,10 @@
  * @returns {boolean} - Whether the IPA is valid.
  */
  function validate(ipa) {
-    try {
-        const regex = new RegExp('^[().a-z|æçðøħŋœǀ-ǃɐ-ɻɽɾʀ-ʄʈ-ʒʔʕʘʙʛ-ʝʟʡʢʰʲʷʼˀˈˌːˑ˞ˠˡˤ-˩̴̘̙̜̝̞̟̠̤̥̩̪̬̯̰̹̺̻̼̀́̂̃̄̆̈̊̋̌̏̽̚͜͡βθχ᷄᷅᷈‖‿ⁿⱱ]+$', 'gui');
-        return regex.test(ipa);
-    } catch (err) {
-        return err;
-    }
+    const delimiterRegex = new RegExp(/[\/\[\]]/, 'gui');
+    ipa = ipa.replaceAll(delimiterRegex, '');
+    const ipaRegex = new RegExp(/^[().a-z|æçðøħŋœǀ-ǃɐ-ɻɽɾʀ-ʄʈ-ʒʔʕʘʙʛ-ʝʟʡʢʰʲʷʼˀˈˌːˑ˞ˠˡˤ-˩̴̘̙̜̝̞̟̠̤̥̩̪̬̯̰̹̺̻̼̀́̂̃̄̆̈̊̋̌̏̽̚͜͡βθχ᷄᷅᷈‖‿ⁿⱱ]+$/, 'gui');
+    return ipaRegex.test(ipa);
 }
 
 module.exports = {
