@@ -12,14 +12,39 @@
     "jshintConfig": {
         "esversion": 8
     },
+    "prettier":{
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "printWidth": 120,
+        "tabWidth": 4,
+        "semi": true,
+        "bracketSpacing": true,
+        "jsxSingleQuote": true,
+        "arrowParens": "avoid",
+        "parser": "babel",
+        "useTabs": false,
+        "requirePragma": false,
+        "proseWrap": "preserve",
+        "endOfLine": "lf",
+        "overrides": [
+            {
+                "files": "*.json",
+                "options": {
+                    "parser": "json"
+                }
+            }
+        ]
+    },
     "devDependencies": {
         "@types/jest": "^28.1.7",
         "jest": "^28.1.1",
-        "jshint": "^2.13.4"
+        "jshint": "^2.13.4",
+        "prettier": "^2.7.1"
     },
     "scripts": {
-        "test": "npm run lint && jest",
+        "test": "npm run prettier && npm run lint && npm run jest",
         "jest": "jest --verbose",
-        "lint": "jshint dist/index.js --verbose --show-non-errors"
+        "lint": "jshint dist/index.js --verbose --show-non-errors",
+        "prettier": "prettier -c dist/index.js tests/"
     }
 }
