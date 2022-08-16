@@ -40,7 +40,7 @@ By default, the `validate` function strips delimiters (`/.../`, `[...]`) and che
 function validate(ipa, strip = true, normalizeIPA = false)
 ```
 ### normalize
-The `normalize` function ensures that the IPA is using the correct unicode for similar looking characters (e.g. that you're using`ˈ` instead of `'`).
+The `normalize` function ensures that the IPA is using the correct unicode for similar looking characters (e.g. that you're using `ˈ` instead of `'`).
 By default, it does *not* strip delimiters.
 ```js
 /**
