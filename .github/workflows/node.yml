@@ -9,6 +9,9 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [16.16.0, 17.x, 18.x, latest]
+        include:
+        - node-version: 12.21.0
+          experimental: true
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
