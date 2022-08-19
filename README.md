@@ -1,4 +1,4 @@
-# Node package for validating IPA
+# Node package for validating and normalizing IPA
 [![Node.js CI](https://github.com/theresnotime/ipa-validator/actions/workflows/node.yml/badge.svg)](https://github.com/theresnotime/ipa-validator/actions/workflows/node.yml)
 [![CodeQL](https://github.com/theresnotime/ipa-validator/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/theresnotime/ipa-validator/actions/workflows/codeql-analysis.yml)
 [![install size](https://packagephobia.com/badge?p=@theresnotime/ipa-validator)](https://packagephobia.com/result?p=@theresnotime/ipa-validator)
@@ -35,9 +35,10 @@ By default, the `validate` function strips delimiters (`/.../`, `[...]`) and che
  * @param {string} ipa - IPA to validate.
  * @param {boolean} strip - Strip delimiters (default: true)
  * @param {boolean} normalizeIPA - Normalize IPA (default: false)
+ * @param {boolean} google - Normalize IPA for Google TTS (default: false)
  * @returns {boolean} - Whether the IPA is valid.
  */
-function validate(ipa, strip = true, normalizeIPA = false)
+function validate(ipa, strip = true, normalizeIPA = false, google = false)
 ```
 ### normalize
 The `normalize` function ensures that the IPA is using the correct unicode for similar looking characters (e.g. that you're using `ˈ` instead of `'`).
@@ -47,9 +48,10 @@ By default, it does *not* strip delimiters.
  * Normalize IPA
  * @param {string} ipa - IPA to normalize.
  * @param {boolean} strip - Strip delimiters (default: false)
+ * @param {boolean} google - Normalize IPA for Google TTS (default: false)
  * @returns {string} - normalized IPA
  */
-function normalize(ipa, strip = false)
+function normalize(ipa, strip = false, google = false)
 ```
 
 ### stripIPA
