@@ -5,10 +5,12 @@ jobs:
   build:
     name: Node
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         node-version: [16.16.0, 17.x, 18.x, latest]
+        experimental: [false]
         include:
         - node-version: 12.21.0
           experimental: true
