@@ -65,6 +65,28 @@ The `stripIPA` function strips delimiters (`/.../`, `[...]`) from the IPA.
 function stripIPA(ipa)
 ```
 
+### removeDiacritics
+The `removeDiacritics` function removes diacritics from the IPA.
+```js
+/**
+ * Remove diacritics
+ * @param {string} ipa - IPA to modify.
+ * @param {boolean} strip - Strip delimiters (default: false)
+ * @returns {string} - modified IPA
+ */
+function removeDiacritics(ipa, strip = false)
+```
+
+## "Google" option
+As part of a work project, we're feeding IPA to Google's TTS engine — Google is a little opinionated about things like diacritics.
+For example, the IPA `ˈɔːfɫ̩` would not render correctly in Google TTS, so we normalize and remove the diacritics like so:
+
+```js
+await ipavalidator.normalize('ˈɔːfɫ̩', true, true);
+// Returns ˈɔːfl
+```
+Some further examples can be seen in `google.test.js`.
+
 ## Developing
  1. [Fork n' clone](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) this repo
  2. Do a `npm install`
