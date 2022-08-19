@@ -57,8 +57,8 @@ test('[google]: ˈkætⁿnɪp -> ˈkætnnɪp', async () => {
 test('[google]: ˈæp̚t -> ˈæpt', async () => {
     expect(await ipavalidator.normalize('ˈæp̚t', true, true)).toBe('ˈæpt');
 });
-test('[google]: ˈspɒtˡlɨs -> ˈspɒtˡlɨs', async () => {
-    expect(await ipavalidator.normalize('ˈspɒtˡlɨs', true, true)).toBe('ˈspɒtˡlɨs');
+test('[google]: ˈspɒtˡlɨs -> ˈspɒtllɨs', async () => {
+    expect(await ipavalidator.normalize('ˈspɒtˡlɨs', true, true)).toBe('ˈspɒtllɨs');
 });
 test('[google]: kənˈfjuːʒən -> kənˈfjuːʒən', async () => {
     expect(await ipavalidator.normalize('kənˈfjuːʒən', true, true)).toBe('kənˈfjuːʒən');
@@ -84,8 +84,8 @@ test('[google]: ef.xa.ɾiˈsto -> ef.xa.ɾiˈsto', async () => {
 test('[google]: ˈsʊʃi -> ˈsʊʃi', async () => {
     expect(await ipavalidator.normalize('ˈsʊʃi', true, true)).toBe('ˈsʊʃi');
 });
-test('[google]: spɐˈsʲibə -> spɐˈsʲibə', async () => {
-    expect(await ipavalidator.normalize('spɐˈsʲibə', true, true)).toBe('spɐˈsʲibə');
+test('[google]: spɐˈsʲibə -> spɐˈsjibə', async () => {
+    expect(await ipavalidator.normalize('spɐˈsʲibə', true, true)).toBe('spɐˈsjibə');
 });
 test('[google]: suːpəˌkælɨˌfɹædʒɨˌlɪstɪkˌɛkspɪˌælɨˈdəʊʃəs -> suːpəˌkælɨˌfɹædʒɨˌlɪstɪkˌɛkspɪˌælɨˈdəʊʃəs', async () => {
     expect(await ipavalidator.normalize('suːpəˌkælɨˌfɹædʒɨˌlɪstɪkˌɛkspɪˌælɨˈdəʊʃəs', true, true)).toBe(
