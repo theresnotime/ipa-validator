@@ -79,7 +79,22 @@ function removeDiacritics(ipa, strip = false)
 
 ## "Google" option
 As part of a work project, we're feeding IPA to Google's TTS engine — Google is a little opinionated about things like diacritics.
-For example, the IPA `ˈɔːfɫ̩` would not render correctly in Google TTS, so we normalize and remove the diacritics like so:
+For example, the IPA `ˈɔːfɫ̩` would not render correctly in Google TTS. A custom charmap is used to normalize certain characters:
+```js
+let charmap = [
+    ['(', ''],
+    [')', ''],
+    ["'", 'ˈ'],
+    [':', 'ː'],
+    [',', 'ˌ'],
+    ['ⁿ', 'n'], // 207F
+    ['ʰ', 'h'], // 02B0
+    ['ɫ', 'l'], // 026B
+    ['ˡ', 'l'], // 02E1
+    ['ʲ', 'j'], // 02B2
+];
+```
+Doing Google-y normalizing is just a call like:
 
 ```js
 await ipavalidator.normalize('ˈɔːfɫ̩', true, true);

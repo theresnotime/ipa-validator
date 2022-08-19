@@ -35,7 +35,7 @@ function normalize(ipa, strip = false, google = false) {
      * and different from what anyone else will want.
      */
     if (google) {
-        charmap = [
+        let charmap = [
             ['(', ''],
             [')', ''],
             ["'", 'ˈ'],
@@ -52,7 +52,7 @@ function normalize(ipa, strip = false, google = false) {
         }
         ipa = removeDiacritics(ipa);
     } else {
-        charmap = [
+        let charmap = [
             ["'", 'ˈ'],
             [':', 'ː'],
             [',', 'ˌ'],
