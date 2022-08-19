@@ -97,7 +97,7 @@ let charmap = [
 Doing Google-y normalizing is just a call like:
 
 ```js
-await ipavalidator.normalize('ˈɔːfɫ̩', true, true);
+await ipaValidator.normalize('ˈɔːfɫ̩', true, true);
 // Returns ˈɔːfl
 ```
 Some further examples can be seen in `google.test.js`.
