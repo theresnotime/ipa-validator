@@ -5,7 +5,7 @@
  */
 function stripIPA(ipa) {
     const regex = new RegExp(/[\/\[\]]/, 'gui');
-    return ipa.replaceAll(regex, '');
+    return ipa.replace(regex, '');
 }
 
 /**
