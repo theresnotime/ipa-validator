@@ -44,6 +44,8 @@ function normalize(ipa, strip = false, google = false) {
             ['ⁿ', 'n'], // 207F
             ['ʰ', 'h'], // 02B0
             ['ɫ', 'l'], // 026B
+            ['ˡ', 'l'], // 02E1
+            ['ʲ', 'j'], // 02B2
         ];
         for (let char in charmap) {
             ipa = ipa.replaceAll(charmap[char][0], charmap[char][1]);
